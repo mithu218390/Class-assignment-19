@@ -1,0 +1,386 @@
+    /****  RESET CSS START ****/
+    
+*{
+margin: 0;
+padding: 0;
+    
+}
+    
+.text-left{
+text-align: left;
+    
+}
+    
+.text-right{
+text-align: right;
+    
+}
+    
+.text-center{
+text-align: center;
+    
+}
+    
+.f-left{
+float: left;
+    
+}
+    
+.f-right{
+float: right;
+    
+}
+    
+.clear::after{
+content: '';
+clear: both;
+display: block;
+    
+}
+    
+img{
+max-width: 100%;
+    
+}
+    
+a{
+text-decoration: none;
+display: inline-block;
+    
+}
+    
+.fixed-width{
+width: 90%;
+margin: 0 auto;
+max-width: 100%;
+    
+}
+    
+
+    
+ul{
+list-style: none;
+    
+}
+.::after{
+content: '' ;
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+background: ;
+    
+}
+body{
+    font-family: sans-serif;
+}
+    
+    /****  RESET CSS END ****/
+
+/**** HEADER SECTION START ****/
+header{
+    background: rgba(0, 0, 0, 0.719);
+}
+header .logo{
+    width: 30%;
+}
+header .logo a img {
+    position: relative;
+    width: 220px;
+    top: 10px;
+}
+nav{
+    width: 70%;
+}
+nav ul li:nth-child(1){
+    margin-right: -4px;
+}
+nav ul li {
+    display: inline-block;
+    margin-left: -4px;
+    padding: 20px 0;
+    position: relative;
+    top: 3px;
+}
+
+nav ul li a{
+    display: inline-block;
+    font-size: 15px;
+    padding: 0 10px;
+    color: #fff;
+       
+}
+nav ul li:hover a{
+    color: tomato;
+}
+
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 93%;
+    left: 0;
+    background: tomato;
+    transform: scaleX(0);
+    visibility: hidden;
+    transition: .5s;
+}
+nav ul li a:hover::after{
+    transform: scaleX(1);
+    visibility: visible;
+}
+/**** DROPDOWN START ****/
+
+nav ul li{
+    position: relative;
+}
+nav ul li ul {
+    position: absolute;
+    background: #fff;
+    width: 200px;
+    top: 200px;
+    left: 0;
+    box-shadow: 0px 2px 15px rgb(0 0 0 / 66%);
+    transition: .4s;
+    transform: scaleY(0);
+    transform-origin: top center;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+nav ul li ul li{
+    display: block;
+    text-align: left;
+    margin: 0;
+}
+nav ul li ul li a{
+    display: block;
+    color: black;
+    padding-top: 0;
+    padding-right: 0;
+   
+}
+
+nav ul li ul li a::after{
+    display: none;
+}
+nav ul li:hover ul{
+    top: 94%;
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+   
+}  
+nav ul li ul li:hover a {
+    background: gray;
+    padding: 10px 0;
+     
+}
+       
+/**** HEADER SECTION END ****/
+
+/**** BANNER SECTION START ****/
+
+.banner{
+    background: url(./img/banner\ img.jpg) center no-repeat;
+    background-size: cover;
+    padding: 200px 0;
+    z-index: 1;
+}
+.banner::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.616);
+    z-index: -1;
+}
+.banner h1{
+    color: #fff;
+    font-size: 45px;
+}
+.banner h2{
+    color: #fff;
+    margin: 10px 0;
+    position: relative;
+   
+    
+}
+.banner h2::before {
+    content: "";
+    position: absolute;
+    width: 5%;
+    height: 3px;
+    top: 54%;
+    left: 380px;
+    background: gray;
+}
+.banner h2::after {
+    content: "";
+    position: absolute;
+    width: 5%;
+    height: 3px;
+    top: 54%;
+    right: 380px;
+    background: gray;
+}
+.banner .btn a{
+    color: #fff;
+    background: tomato;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px ;
+    transition: .5s;
+}
+
+.banner .btn a:hover{
+    background: #fff;
+    color: tomato;
+}
+    
+    
+/**** BANNER SECTION END ****/
+
+/**** SERVICE SECTION START ****/
+
+ .service{
+     background: #f8f8f8;
+     padding: 60px 0;
+ }   
+ .service .service-item{}   
+ .service-box {
+    background: #fff;
+    padding: 50px 0;
+    box-sizing: border-box;
+    width: 23%;
+    margin-right: 1%;
+    margin-left: 1%;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.171);
+}
+.service-box:hover{
+    background: rgba(60, 88, 139, 0.288);
+}
+  .service-box .fliv-box{}  
+  .service-box .fliv-box img{
+      transform: rotateY(0deg);
+      transition: .5s;
+  }  
+  .service-box:hover .fliv-box img{
+      transform: rotateY(360deg);
+  }  
+  .service-box .fliv-box h2{
+      font-size: 17px;
+  }  
+  .service-box .fliv-box p{
+      margin: 15px 0;
+  }  
+  .service-box .fliv-box a{
+      background: tomato;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      transform: translateY(0px);
+      transition: .5s;
+  } 
+  .service-box .fliv-box a:hover{
+      background: black;
+      transform: translateY(15px);
+  } 
+    
+/**** SERVICE SECTION END ****/
+
+/**** VIDEO SECTION START ****/
+.video{
+    background: #f8f8f8;
+    padding: 50px 0;
+}
+.video-left{
+    width: 46%;
+}
+.video-right{
+    width: 50%;
+    box-sizing: border-box;
+}
+.video-right p{
+    margin: 18px 0;
+}
+.video .main-box a{
+    color: #fff;
+    background: black;
+    padding: 10px 20px;
+    display: inline-block;
+} 
+.video img {
+    margin-left: 16px;
+    max-width: 100%;
+}
+
+.main-box{
+    margin-right: 4%;
+}
+    
+    
+/**** VIDEO SECTION END ****/
+
+/**** SERVICE FOOTER SECTION START ****/
+ .service-footer{
+     background:  #f8f8f8;
+     padding: 50px 0;
+ }  
+ .service-footer p{
+     margin: 20px 0;
+ } 
+ .service-footer input{
+     padding: 10px 0px;
+     padding-right: 240px;
+     border: 1px solid rgba(0, 0, 0, 0.226);
+ } 
+ .service-footer input:focus{
+     color: transparent;
+ } 
+ 
+ 
+ .service-footer .main-form .image{
+        background: top right no-repeat;
+        background-size: cover;
+        background-position: 15px 15px ;
+        
+ }
+ .service-footer .main-form .form-left{
+     width: 50%;
+ }
+ .service-footer .main-form .form-right{
+     background: url(./img/girl.jpg) top right no-repeat;
+     width: 50%;
+ }   
+ 
+    
+/**** SERVICE FOOTER SECTION END ****/
+
+/**** FOOTER SECTION START ****/
+footer{
+    background: rgba(0, 0, 0, 0.61);
+    padding: 10px 0;
+}
+footer p{
+    color: #fff;
+}
+    
+footer .footer-right {
+    margin-right: 90px;
+}  
+footer .footer-right ul{}    
+footer .footer-right ul li{
+    display: inline-block;
+}    
+footer .footer-right ul li a{
+    color: #fff;
+    padding: 0 10px;
+    
+}    
+footer .footer-right ul li a:hover{}    
+    
+/**** FOOTER SECTION END ****/
